@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { PlusCircle, Trash2, DollarSign, Calendar, Tag, ArrowDownUp, Edit2, Eye, CreditCard } from 'lucide-react';
+import { PlusCircle, Trash2, DollarSign, Calendar, Tag, ArrowDownUp, Edit2, Eye, CreditCard, IndianRupee } from 'lucide-react';
 
 // Define types for our expense data
 type Expense = {
@@ -295,7 +295,7 @@ function App() {
                     </th>
                     <th className="px-4 py-2 text-right text-sm font-medium text-gray-500 cursor-pointer" onClick={() => toggleSort('amount')}>
                       <div className="flex items-center justify-end">
-                        <DollarSign size={16} className="mr-1" />
+                        <IndianRupee size={16} className="mr-1" />
                         Amount
                         <ArrowDownUp size={14} className="ml-1" />
                       </div>
@@ -318,7 +318,7 @@ function App() {
                           {expense.paymentMethod || 'N/A'}
                         </span>
                       </td>
-                      <td className="px-4 py-3 text-sm font-medium text-right text-gray-800">${expense.amount.toFixed(2)}</td>
+                      <td className="px-4 py-3 text-sm font-medium text-right text-gray-800">₹{expense.amount.toFixed(2)}</td>
                       <td className="px-4 py-3 text-center">
                         <div className="flex justify-center space-x-2">
                           <button
